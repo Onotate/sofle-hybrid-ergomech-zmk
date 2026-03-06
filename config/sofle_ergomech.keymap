@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 300
+#define ZMK_MOUSE_SCRL_VAL 140
 #include <dt-bindings/zmk/pointing.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -34,7 +34,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <20>;
+            tap-ms = <250>;
         };
     };
 
@@ -61,7 +61,7 @@
             >;
 
             // Mouse scroll
-            sensor-bindings = <&mousescroll &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&mousescroll>;
         };
 
         lower_layer {
